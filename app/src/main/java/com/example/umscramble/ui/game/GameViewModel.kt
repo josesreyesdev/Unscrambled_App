@@ -13,15 +13,13 @@ const val TAG = "GameFragment"
 class GameViewModel: ViewModel() {
 
     private val _score = MutableLiveData(0)
-    val score: LiveData<Int>
-        get() = _score
+    val score: LiveData<Int> get() = _score
 
     private val _currentWordCount = MutableLiveData(0)
-    val currentWordCount: LiveData<Int>
-        get() = _currentWordCount
+    val currentWordCount: LiveData<Int> get() = _currentWordCount
 
     private val _currentScrambledWord = MutableLiveData<String>()
-    // set the current scrambled word para leer el talkback
+    // set the current scrambled word para leer el talkback con spannable para separar un straing a caracteres
     val currentScrambledWord: LiveData<Spannable> = Transformations.map(_currentScrambledWord) {
         if (it == null) {
             SpannableString("")
@@ -42,15 +40,6 @@ class GameViewModel: ViewModel() {
     private lateinit var currentWord: String
     var wordList: MutableList<String> = mutableListOf()
 
-    init {
-        Log.d(TAG, "GameViewModel created!!")
-        getNextWord()
-    }
-
-    override fun onCleared() {
-        super.onCleared()
-        Log.d(TAG, "GameViewModel destroyed!!")
-    }
 
     /*Get next Word => Update la currentWord y
         currentScrambledWord con la sig word  */
@@ -70,6 +59,11 @@ class GameViewModel: ViewModel() {
             _currentWordCount.value = (_currentWordCount.value)?.inc() //aumenta el valor en uno
             wordList.add(currentWord)
         }
+    }
+
+    init {
+        Log.d(TAG, "GameViewModel created!!")
+        getNextWord()
     }
 
     /* re-initialize the game data to restart the game */
@@ -92,7 +86,7 @@ class GameViewModel: ViewModel() {
     }
 
     fun nextWord(): Boolean {
-        return if ( currentWordCount.value!! < MAX_NO_OF_WORDS) {
+        return if ( _currentWordCount.value!! < MAX_NO_OF_WORDS) {
             getNextWord()
             true
         } else false

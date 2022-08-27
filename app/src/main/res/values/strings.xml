@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Unscramble</string>
+    <string name="app_name">Unscrambled</string>
     <string name="instructions">Unscramble the word using all the letters.</string>
     <string name="instructions2">Descifra la palabra usando todas las letras</string>
-    <string name="skip">Skip/Omitir</string>
+    <string name="skip">Skip</string>
     <string name="submit">Submit</string>
     <string name="score">Score: %d</string>
     <string name="word_count">%d of %d words</string>

@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Jose/Desktop/CodelabsGoogle/Projects/Unscramble/app/src/main/res/layout/activity_main.xml" value="0.20989583333333334" />
+        <entry key="..\:/Users/Jose/Desktop/CodelabsGoogle/Projects/Unscramble/app/src/main/res/layout/game_fragment.xml" value="0.20989583333333334" />
+        <entry key="..\:/Users/Jose/Desktop/CodelabsGoogle/ProjectsAndroid/Unscramble/app/src/main/res/layout/activity_main.xml" value="0.209375" />
+        <entry key="..\:/Users/Jose/Desktop/CodelabsGoogle/ProjectsAndroid/Unscramble/app/src/main/res/layout/game_fragment.xml" value="0.25" />
         <entry key="..\:/Users/Jose/Desktop/CodelabsGoogle/Umscramble/app/src/main/res/layout/fragment_game.xml" value="0.19427083333333334" />
         <entry key="..\:/Users/Jose/Desktop/CodelabsGoogle/Umscramble/app/src/main/res/layout/game_fragment.xml" value="0.15" />
       </map>
@@ -13,5 +17,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="SuppressABINotification">
+    <option name="modulesWithSuppressedNotConfigured">
+      <set>
+        <option value="Umscramble.app" />
+      </set>
+    </option>
   </component>
 </project>
