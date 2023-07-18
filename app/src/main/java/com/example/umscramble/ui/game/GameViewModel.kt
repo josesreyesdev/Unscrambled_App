@@ -6,8 +6,8 @@ import android.text.style.TtsSpan
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.map
 
 const val TAG = "GameFragment"
 class GameViewModel: ViewModel() {
@@ -20,7 +20,7 @@ class GameViewModel: ViewModel() {
 
     private val _currentScrambledWord = MutableLiveData<String>()
     // set the current scrambled word para leer el talkback con spannable para separar un straing a caracteres
-    val currentScrambledWord: LiveData<Spannable> = Transformations.map(_currentScrambledWord) {
+    val currentScrambledWord: LiveData<Spannable> = /*Transformations.map(_currentScrambledWord)*/ _currentScrambledWord.map {
         if (it == null) {
             SpannableString("")
         } else {
@@ -35,10 +35,9 @@ class GameViewModel: ViewModel() {
             spannable
         }
     }
-        //get() = _currentScrambledWord
 
     private lateinit var currentWord: String
-    var wordList: MutableList<String> = mutableListOf()
+    private var wordList: MutableList<String> = mutableListOf()
 
 
     /*Get next Word => Update la currentWord y
