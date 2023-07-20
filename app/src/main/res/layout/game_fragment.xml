@@ -6,7 +6,7 @@
     <data>
         <variable
             name="gameViewModel"
-            type="com.example.umscramble.ui.game.GameViewModel" />
+            type="com.example.unscramble.ui.game.GameViewModel" />
 
         <variable
             name="maxNoOfWords"
@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="16dp"
-            tools:context="com.example.umscramble.ui.game.GameFragment">
+            tools:context="com.example.unscramble.ui.game.GameFragment">
 
             <TextView
                 android:id="@+id/word_count"

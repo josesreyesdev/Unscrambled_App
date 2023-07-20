@@ -1,4 +1,4 @@
-package com.example.umscramble.ui.game
+package com.example.unscramble.ui.game
 
 import android.os.Bundle
 import android.util.Log
@@ -8,8 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.viewModels
-import com.example.umscramble.R
-import com.example.umscramble.databinding.GameFragmentBinding
+import com.example.unscramble.R
+import com.example.unscramble.databinding.GameFragmentBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class GameFragment : Fragment() {

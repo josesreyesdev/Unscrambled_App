@@ -1,4 +1,4 @@
-package com.example.umscramble
+package com.example.unscramble
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

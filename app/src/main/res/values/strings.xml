@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Unscrambled</string>
+    <string name="app_name">Unscramble</string>
     <string name="instructions">Unscramble the word using all the letters.</string>
     <string name="instructions2">Descifra la palabra usando todas las letras</string>
     <string name="skip">Skip</string>

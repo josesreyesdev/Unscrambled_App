@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace 'com.example.umscramble'
+    namespace 'com.example.unscramble'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.umscramble"
+        applicationId "com.example.unscramble"
         minSdk 21
         targetSdk 33
         versionCode 1
@@ -44,7 +44,6 @@ dependencies {
     implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.fragment:fragment-ktx:1.6.0'
-    //implementation 'androidx.legacy:legacy-support-v4:1.0.0'
 
     //LiveData
     implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'

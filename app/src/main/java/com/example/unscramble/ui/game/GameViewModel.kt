@@ -1,4 +1,4 @@
-package com.example.umscramble.ui.game
+package com.example.unscramble.ui.game
 
 import android.text.Spannable
 import android.text.SpannableString
@@ -19,8 +19,8 @@ class GameViewModel: ViewModel() {
     val currentWordCount: LiveData<Int> get() = _currentWordCount
 
     private val _currentScrambledWord = MutableLiveData<String>()
-    // set the current scrambled word para leer el talkback con spannable para separar un straing a caracteres
-    val currentScrambledWord: LiveData<Spannable> = /*Transformations.map(_currentScrambledWord)*/ _currentScrambledWord.map {
+    // set the current scrambled word para leer el talkback con spannable de acuerdo al array de characters
+    val currentScrambledWord: LiveData<Spannable> = _currentScrambledWord.map {
         if (it == null) {
             SpannableString("")
         } else {
@@ -38,7 +38,6 @@ class GameViewModel: ViewModel() {
 
     private lateinit var currentWord: String
     private var wordList: MutableList<String> = mutableListOf()
-
 
     /*Get next Word => Update la currentWord y
         currentScrambledWord con la sig word  */
@@ -90,5 +89,4 @@ class GameViewModel: ViewModel() {
             true
         } else false
     }
-
 }

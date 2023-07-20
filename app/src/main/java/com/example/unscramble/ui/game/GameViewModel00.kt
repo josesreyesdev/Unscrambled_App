@@ -1,4 +1,4 @@
-package com.example.umscramble.ui.game
+package com.example.unscramble.ui.game
 
 import android.util.Log
 import androidx.lifecycle.ViewModel
