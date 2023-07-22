@@ -15,7 +15,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 class GameFragment : Fragment() {
     //reference to ViewModel
     private val viewModel: GameViewModel by viewModels() /* Delegado de propiedad -> Transfiere responsabilidad
-    del metodo get y set en una clase diferente*/
+    del metodo get y set  a una clase diferente*/
 
     private lateinit var binding: GameFragmentBinding
 
@@ -23,7 +23,6 @@ class GameFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout XML file and return a binding object instance
         /*binding = GameFragmentBinding.inflate(inflater, container, false) // ==> Se
         reemplazó para la vinculacion de datos con la sig. linea: */
         binding = DataBindingUtil.inflate(inflater, R.layout.game_fragment, container, false)
@@ -62,10 +61,10 @@ class GameFragment : Fragment() {
         } */
     }
 
-    /*
-            * Checks the user's word, and updates the score accordingly.
-            * Displays the next scrambled word.
-            */
+    /**
+    * Checks the user's word, and updates the score accordingly.
+    * Displays the next scrambled word.
+    * */
     private fun onSubmitWord() {
         val playerWord = binding.textInputEditText.text.toString()
         clearValues()
@@ -79,6 +78,7 @@ class GameFragment : Fragment() {
             setErrorTextField(true)
         }
     }
+    // bandas anchas
 
     /*
      * Skips the current word without changing the score.
@@ -98,7 +98,7 @@ class GameFragment : Fragment() {
         MaterialAlertDialogBuilder(requireContext())
             .setTitle(getString(R.string.congratulations))
             .setMessage(getString(R.string.you_scored, viewModel.score.value))
-            .setCancelable(false) //No se puede cancelar el dialog cuando se presione la tecla Back
+            .setCancelable(false) //haciendo que no se cancele el dialog cuando se presione la tecla Back
             .setNegativeButton(getString(R.string.exit)) { _, _, -> // recibe dos parametros una string y una funcion
                 exitGame()
             }

@@ -16,28 +16,29 @@ class GameViewModel00 : ViewModel() {
     val currentScrambledWord: String get() = _currentScrambledWord
 
     private lateinit var currentWord: String //palabra actual a descifrar
-    private var wordList: MutableList<String> = mutableListOf() // listaPalabrasUsadas
+    private val wordList: MutableList<String> = mutableListOf() // listaPalabrasUsadas
 
     private fun getNextWord() {
         currentWord = allWordsList.random()
         val temporalWord = currentWord.toCharArray()
         temporalWord.shuffle()
+        val shuffledWord = String(temporalWord)
 
-        while ( String(temporalWord).equals(currentWord, false)) {
+        while ( shuffledWord.equals(currentWord, false)) {
             temporalWord.shuffle()
         }
 
         if (wordList.contains(currentWord)) {
             getNextWord()
         } else {
-            _currentScrambledWord = String(temporalWord)
+            _currentScrambledWord = shuffledWord
             ++_currentWordCount
             wordList.add(currentWord)
         }
     }
 
     init {
-        Log.d(TAG00, "Game ViewModel Created!")
+        Log.d(TAG00, "GameViewModel Created!")
         getNextWord()
     }
 
